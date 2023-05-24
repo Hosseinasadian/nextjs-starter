@@ -11,6 +11,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
             node-version: 12
+      - uses: actions/checkout@v3
+      - run: cd nextjs-starter
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
       - run: yarn build
